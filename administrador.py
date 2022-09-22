@@ -1,3 +1,4 @@
+import empleado as empAdmin
 
 ISInvalida = False
 ISValida = True
@@ -20,9 +21,18 @@ class inicioSesionA(admin):
             return ISValida
     
 def dashboard():
+    
     print('Bienvenido Kevin \n'
           'Seleccione la acción de su preferencia \n'
           '1. Atender tickets activos \n'
           '2. Consultar tickets cerrados \n'
-          '3. Consultar empleados')
+          '3. Consultar empleados \n')
+    panelAdmin = input('Digite la opcion que requiere ejecutar: ')
+    
+    if panelAdmin == 1:
+        print('Opcion 1')
+    elif panelAdmin == 2:
+        print('Opcion 2')
+    elif panelAdmin == 3:
+        print(f'Los empleados disponibles son: {empAdmin.empleados}')
 
