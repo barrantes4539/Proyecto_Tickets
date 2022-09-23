@@ -29,10 +29,10 @@ def dashboard():
           '3. Consultar empleados \n')
     panelAdmin = input('Digite la opcion que requiere ejecutar: ')
     
-    if panelAdmin == 1:
+    if panelAdmin == '1':
         print('Opcion 1')
-    elif panelAdmin == 2:
+    elif panelAdmin == '2':
         print('Opcion 2')
-    elif panelAdmin == 3:
+    elif panelAdmin == '3':
         print(f'Los empleados disponibles son: {empAdmin.empleados}')
 
