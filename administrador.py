@@ -1,4 +1,8 @@
-import empleado as empAdmin
+
+
+import sys
+import empleado as e
+
 
 ISInvalida = False
 ISValida = True
@@ -20,19 +24,34 @@ class inicioSesionA(admin):
         else:
             return ISValida
     
-def dashboard():
-    
-    print('Bienvenido Kevin \n'
-          'Seleccione la acción de su preferencia \n'
-          '1. Atender tickets activos \n'
-          '2. Consultar tickets cerrados \n'
-          '3. Consultar empleados \n')
-    panelAdmin = input('Digite la opcion que requiere ejecutar: ')
-    
-    if panelAdmin == '1':
-        print('Opcion 1')
-    elif panelAdmin == '2':
-        print('Opcion 2')
-    elif panelAdmin == '3':
-        print(f'Los empleados disponibles son: {empAdmin.empleados}')
+    def dashboard():
+        
+        print('Bienvenido Kevin \n'
+            'Seleccione la acción de su preferencia \n'
+            '1. Atender tickets activos \n'
+            '2. Consultar tickets cerrados \n'
+            '3. Consultar empleados \n'
+            '4. Salir')
+        panelAdmin = input('Digite la opcion que requiere ejecutar: ')
+        
+        if panelAdmin == '1':
+            print('Opcion 1')
+        elif panelAdmin == '2':
+            print('Opcion 2')
+        elif panelAdmin == '3':
+            print(f'Los empleados disponibles son: {e.empleados}')
+
+
+    def sistemaA():
+        sistemaAdmin = inicioSesionA.ISAdmin()
+        dashbAdmin = inicioSesionA.dashboard()
+        if sistemaAdmin == ISValida:
+            print(f'Bienvenido al sistema de administrador {admin.nombreAdmin}')
+            dashbAdmin
+        elif sistemaAdmin == ISInvalida:
+            print('No se pudo accesar al sistema')
+
+# sysAdmin = inicioSesionA.sistemaA()
+# sysAdmin
+
 

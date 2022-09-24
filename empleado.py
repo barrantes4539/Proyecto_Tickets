@@ -1,20 +1,20 @@
-import re
-from statistics import correlation
-from xml.dom.minidom import Identified
+
 
 ##Variables
+
+
+nombre = None
+apellido = None
+iden = None
+email = None
+password = None
+
 EmpRegistrado = True
 EmpNRegistrado = False
 empleados = []
 ticket = None
 
 
-print('============= Sign in ==============')
-iden = input('Identificacion: ')
-nombre = input('Nombre: ')
-apellido = input('Apellido: ')
-email = input('Correo: ')
-password = input('Contraseña: ')
 
 class persona:
     def __init__(self, identificacion, nombre, apellido, correo, passw):
@@ -35,20 +35,27 @@ class persona:
     def getPass(self):
         return f'{self.passwordP}'
 
+
 class registroEmpleado(persona):
 
     def empleado(self, identificacion, nombre, apellido, email, password):
         super().__init__(identificacion, nombre, apellido, email, password)
     
     def registroEmp(self):
+        print('============= Sign in ==============')
+        iden = input('Identificacion: ')
+        nombre = input('Nombre: ')
+        apellido = input('Apellido: ')
+        email = input('Correo: ')
+        password = input('Contraseña: ')
         
-        self.nombreP = nombre
-        self.apellidoP = apellido
-        self.correoP = email
-        self.passwordP = password
-        self.identificacionP = iden
         registro = input('¿Desea registrarse? s/n \n')
         if registro == 's':
+            self.nombreP = nombre
+            self.apellidoP = apellido
+            self.correoP = email
+            self.passwordP = password
+            self.identificacionP = iden
             # empleados.append(personaEmp.nombreP)
             # print(f'Estos son los empleados: {}')
             ############################################################
@@ -57,9 +64,6 @@ class registroEmpleado(persona):
             ############################################################
         elif registro == 'n':
             return EmpNRegistrado
-
-
-# class ISEmpleado(registroEmpleado):
 
     def generadorTicket(self):
             
@@ -86,15 +90,18 @@ class registroEmpleado(persona):
     def sistemaE():
         datosEmpleado = registroEmpleado(iden, nombre, apellido, email, password)
         if datosEmpleado.registroEmp() == EmpRegistrado:
+            empleados.append(nombre)
             print(f'Ha sido registrado con exito \n')
             datosEmpleado.generadorTicket()
         elif datosEmpleado.registroEmp() == EmpNRegistrado:
             print('No se registro el empleado')
 
 
-# persona.getID()
-sisEmp = registroEmpleado.sistemaE()
-sisEmp
+
+
+
+
+
 
       
 

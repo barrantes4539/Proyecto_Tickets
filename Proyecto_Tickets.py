@@ -1,21 +1,25 @@
-import empleado as Emp
-import administrador as Admin
+import empleado as emp
+import administrador as admin
+
+class main:
+    def pageMain():
+        print('---------Portal---------- \n'
+              '1. Empleado \n'
+              '2. Administrador \n '
+              '3. Registrarse(empleado)')
+        opcIngreso = input('Digite la opcion con la que requiere ingresar al sistema: ')
+        if opcIngreso == '1':
+            emp.registroEmpleado.generadorTicket()
+            return 1
+        elif opcIngreso == '2':
+            admin.inicioSesionA.dashboard()
+            return 2
+        elif opcIngreso == '3':
+            emp.registroEmpleado.sistemaE()
+            return 3
+            
 
 
-sistemaEmpleado = Emp.registroEmpleado.sistemaE()
-sistemaEmpleado
-# Emp.tickets.generadorTicket()
-
-# if Admin.inicioSesionA.ISAdmin() == True:
-#     print(f'Bienvenido al sistema')
-#     Admin.dashboard()
-# else:
-#     print('Credenciales inválidas, intente de nuevo. \n')
-# while Admin.inicioSesionA.ISAdmin() == False:
-#     print('Credenciales inválidas, intente de nuevo. \n')
-#     if Admin.inicioSesionA.ISAdmin() == True:
-#         print(f'Bienvenido al sistema')
-#         break
 
 
 
