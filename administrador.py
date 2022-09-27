@@ -40,18 +40,21 @@ class inicioSesionA(admin):
             print('Opcion 2')
         elif panelAdmin == '3':
             print(f'Los empleados disponibles son: {e.empleados}')
+        elif panelAdmin == '4':
+            return 4
 
 
     def sistemaA():
-        sistemaAdmin = inicioSesionA.ISAdmin()
-        dashbAdmin = inicioSesionA.dashboard()
-        if sistemaAdmin == ISValida:
-            print(f'Bienvenido al sistema de administrador {admin.nombreAdmin}')
-            dashbAdmin
-        elif sistemaAdmin == ISInvalida:
-            print('No se pudo accesar al sistema')
+        if inicioSesionA.ISAdmin() == ISValida:
+            print(f'Bienvenido al sistema de administrador {admin.nombreAdmin} \n')
+            if inicioSesionA.dashboard() == 4:
+                return 1
+        elif inicioSesionA.ISAdmin() == ISInvalida:
+            print('No se pudo accesar al sistema \n')
+            return 2
 
 # sysAdmin = inicioSesionA.sistemaA()
 # sysAdmin
+
 
 
