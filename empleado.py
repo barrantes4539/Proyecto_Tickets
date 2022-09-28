@@ -12,7 +12,7 @@ password = None
 EmpRegistrado = True
 EmpNRegistrado = False
 empleados = []
-ticket = None
+ticket = []
 
 
 
@@ -91,9 +91,15 @@ class registroEmpleado(persona):
                 if SelSoporte == '1':
                     print('\n')
                     desMSOP = input('Describa su problema técnico: ')
-                    ticket = dict(Empleado = self.getNom(), Apellido = self.getApell(), Descripcion = desMSOP)
+                    print('\n \n')
+                    # ticket = dict(Empleado = self.getNom(), Apellido = self.getApell(), aTecnica = MSOP, Descripcion = desMSOP)
+                    # print(ticket)
+                    ticket.append(self.getID())
+                    ticket.append(self.getNom())
+                    ticket.append(self.getApell())
+                    ticket.append(MSOP)
+                    ticket.append(desMSOP)
                     return 4
-                    
                 if SelSoporte == '4':
                     return 5
             

@@ -12,7 +12,7 @@ class sistemaPrincipal:
         opcIngreso = input('Digite la opcion con la que requiere ingresar al sistema: \n')
         if opcIngreso == '1':
             emp.registroEmpleado.sistemaE()
-            print("Ingrese como administrador \n \n")
+            print("Ingrese como administrador")
             admin.inicioSesionA.sistemaA()
         elif opcIngreso == '2':
             print('Ha salido con exito del sistema')

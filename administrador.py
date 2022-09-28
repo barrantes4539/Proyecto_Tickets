@@ -6,6 +6,7 @@ import empleado as e
 
 ISInvalida = False
 ISValida = True
+
 class admin:
         idAdmin = '305390775'
         nombreAdmin = 'Kevin'
@@ -35,7 +36,7 @@ class inicioSesionA(admin):
         panelAdmin = input('Digite la opcion que requiere ejecutar: ')
         
         if panelAdmin == '1':
-            print('Opcion 1')
+            print(f'Tickets activos: {e.ticket}')
         elif panelAdmin == '2':
             print('Opcion 2')
         elif panelAdmin == '3':
