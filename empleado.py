@@ -100,8 +100,32 @@ class registroEmpleado(persona):
                     ticket.append(MSOP)
                     ticket.append(desMSOP)
                     return 4
-                if SelSoporte == '4':
-                    return 5
+                elif SelSoporte == '2':
+                    print('\n')
+                    desMSOP = input('Describa su problema técnico: ')
+                    print('\n \n')
+                    # ticket = dict(Empleado = self.getNom(), Apellido = self.getApell(), aTecnica = MSOP, Descripcion = desMSOP)
+                    # print(ticket)
+                    ticket.append(self.getID())
+                    ticket.append(self.getNom())
+                    ticket.append(self.getApell())
+                    ticket.append(SIMR)
+                    ticket.append(desMSOP)
+
+                elif SelSoporte == '3':
+                    print('\n')
+                    desMSOP = input('Describa su problema técnico: ')
+                    print('\n \n')
+                    # ticket = dict(Empleado = self.getNom(), Apellido = self.getApell(), aTecnica = MSOP, Descripcion = desMSOP)
+                    # print(ticket)
+                    ticket.append(self.getID())
+                    ticket.append(self.getNom())
+                    ticket.append(self.getApell())
+                    ticket.append(SLAT)
+                    ticket.append(desMSOP)
+                elif SelSoporte == '4':
+                    return print('Ha salido del sistema')
+
             
 
 
